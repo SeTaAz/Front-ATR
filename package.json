@@ -1,0 +1,36 @@
+{
+  "name": "mi-proyecto",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "version": "11.5.1",
+      "onFail": "download"
+    }
+  },
+  "type": "module",
+  "private": true,
+  "dependencies": {
+    "@reduxjs/toolkit": "^2.14.0",
+    "@tailwindcss/vite": "^4.3.5",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "react-icons": "^5.7.0",
+    "react-redux": "^9.3.1",
+    "react-router-dom": "^7.18.5",
+    "tailwindcss": "^4.3.5"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^6.3.0",
+    "vite": "^8.3.8"
+  }
+}
