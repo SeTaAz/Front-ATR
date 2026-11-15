@@ -6,3 +6,5 @@ export { default as ModalFormulario } from './ModalFormulario';
 export { default as ModalVer } from './ModalVer';
 export { default as Notificacion } from './Notificacion';
 export { default as Tarjeta } from './Tarjeta';
+export { default as CountUp } from './CountUp';
+export { default as OrbitImages } from './OrbitImages';
