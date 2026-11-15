@@ -9,3 +9,15 @@
   --color-bg-verde:#1F4A2A;
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 4rem;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;
+}
+
