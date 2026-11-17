@@ -21,6 +21,7 @@ export default function UsuariosComponent() {
     modalMode,
     formData,
     setFormData,
+    updateFormRole,
     notification,
     setNotification,
     openCreate,
@@ -71,6 +72,7 @@ export default function UsuariosComponent() {
         selectedUser={selectedUser}
         formData={formData}
         setFormData={setFormData}
+        onRoleChange={updateFormRole}
         onClose={closeModal}
         onSave={saveUser}
         onDelete={deleteUser}

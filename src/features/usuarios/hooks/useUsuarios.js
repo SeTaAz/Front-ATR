@@ -1,5 +1,9 @@
 import { useEffect, useMemo, useState } from "react";
-import { getInitialUsers, getUserInitials } from "../services/usuariosService";
+import {
+  getInitialUsers,
+  getNextUserIdentifier,
+  getUserIdentifierForRole,
+} from "../services/usuariosService";
 
 const USERS_PER_PAGE = 10;
 
@@ -72,7 +76,9 @@ export default function useUsuarios() {
   };
 
   const openCreate = () => {
-    setFormData(createEmptyForm());
+    const newForm = createEmptyForm();
+    newForm.identifier = getNextUserIdentifier(newForm.role, users);
+    setFormData(newForm);
     setSelectedUser(null);
     setModalMode("create");
   };
@@ -97,6 +103,17 @@ export default function useUsuarios() {
   const openDelete = (user) => {
     setSelectedUser(user);
     setModalMode("delete");
+  };
+
+  const updateFormRole = (role) => {
+    setFormData((currentForm) => ({
+      ...currentForm,
+      role,
+      identifier:
+        modalMode === "edit"
+          ? getUserIdentifierForRole(role, currentForm.identifier)
+          : getNextUserIdentifier(role, users),
+    }));
   };
 
   const saveUser = (event) => {
@@ -164,6 +181,7 @@ export default function useUsuarios() {
     modalMode,
     formData,
     setFormData,
+    updateFormRole,
     notification,
     setNotification,
     openCreate,

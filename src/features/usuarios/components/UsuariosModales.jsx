@@ -27,6 +27,7 @@ export default function UsuariosModales({
   selectedUser,
   formData,
   setFormData,
+  onRoleChange,
   onClose,
   onSave,
   onDelete,
@@ -73,22 +74,20 @@ export default function UsuariosModales({
           <input
             id="usuario-id"
             type="text"
-            required
+            disabled
             value={formData.identifier}
-            onChange={(event) =>
-              setFormData({ ...formData, identifier: event.target.value })
-            }
-            placeholder="Ej. U-1001"
-            className={inputClassName}
+            aria-describedby="usuario-id-ayuda"
+            className={`${inputClassName} cursor-not-allowed bg-slate-100 text-slate-500 disabled:opacity-100`}
           />
+          <p id="usuario-id-ayuda" className="mt-1 text-xs text-slate-500">
+            Se genera automáticamente según el rol y el consecutivo disponible.
+          </p>
         </FormField>
         <FormField id="usuario-rol" label="Rol asignado">
           <select
             id="usuario-rol"
             value={formData.role}
-            onChange={(event) =>
-              setFormData({ ...formData, role: event.target.value })
-            }
+            onChange={(event) => onRoleChange(event.target.value)}
             className={inputClassName}
           >
             {ROLES_USUARIO.map((role) => (
