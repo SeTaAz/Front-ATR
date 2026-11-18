@@ -121,28 +121,20 @@ export default function UsuariosModales({
         title="Detalles del usuario"
       >
         {selectedUser && (
-          <dl className="space-y-3 text-sm text-slate-700">
-            <div>
-              <dt className="inline font-semibold">Nombre: </dt>
-              <dd className="inline">{selectedUser.name}</dd>
-            </div>
-            <div>
-              <dt className="inline font-semibold">Correo: </dt>
-              <dd className="inline">{selectedUser.email}</dd>
-            </div>
-            <div>
-              <dt className="inline font-semibold">ID: </dt>
-              <dd className="inline">{selectedUser.identifier}</dd>
-            </div>
-            <div>
-              <dt className="inline font-semibold">Rol: </dt>
-              <dd className="inline">{selectedUser.role}</dd>
-            </div>
-            <div>
-              <dt className="inline font-semibold">Estado: </dt>
-              <dd className="inline">{selectedUser.status}</dd>
-            </div>
-          </dl>
+          <div className="grid gap-3 sm:grid-cols-2">
+            {[
+              ["Nombre", selectedUser.name],
+              ["ID", selectedUser.identifier],
+              ["Correo", selectedUser.email],
+              ["Rol", selectedUser.role],
+              ["Estado", selectedUser.status],
+            ].map(([label, value]) => (
+              <div key={label} className={label === "Correo" ? "rounded-xl border border-slate-200 bg-slate-50 p-3 sm:col-span-2" : "rounded-xl border border-slate-200 bg-slate-50 p-3"}>
+                <p className="text-xs text-slate-500">{label}</p>
+                <p className="mt-1 text-sm font-medium text-slate-900">{value}</p>
+              </div>
+            ))}
+          </div>
         )}
       </ModalVer>
 

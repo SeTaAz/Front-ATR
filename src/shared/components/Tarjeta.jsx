@@ -13,7 +13,7 @@ export default function Tarjeta({
         <header className="flex flex-wrap items-start justify-between gap-4 border-b border-slate-200 px-5 py-4 sm:px-6">
           <div>
             {title && (
-              <h2 className="text-base font-bold text-verde-oscuro">
+              <h2 className="text-base font-medium text-verde-oscuro">
                 {title}
               </h2>
             )}

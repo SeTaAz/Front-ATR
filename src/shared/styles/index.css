@@ -16,8 +16,66 @@ html {
   -ms-overflow-style: none;
 }
 
+body,
+button,
+input,
+select,
+textarea {
+  font-family: "Segoe UI", Inter, Arial, sans-serif;
+}
+
+body {
+  color: #1e293b;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 700 !important;
+  letter-spacing: -0.015em;
+}
+
+h1[class] {
+  font-weight: 700 !important;
+}
+
+h2[class],
+h3[class] {
+  font-weight: 600 !important;
+}
+
+.font-extrabold,
+.font-bold,
+.font-semibold {
+  font-weight: 500 !important;
+}
+
+th,
+dt,
+label {
+  font-weight: 500 !important;
+}
+
+td,
+p,
+span,
+dd,
+input,
+select,
+textarea,
+button {
+  font-weight: 400;
+}
+
 html::-webkit-scrollbar,
 body::-webkit-scrollbar {
   display: none;
+}
+
+button:not(:disabled),
+[role="button"]:not([aria-disabled="true"]) {
+  cursor: pointer;
 }
 

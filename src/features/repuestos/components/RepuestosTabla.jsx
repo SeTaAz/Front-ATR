@@ -121,7 +121,7 @@ export default function RepuestosTabla({
                       type="button"
                       onClick={() => onView(part)}
                       aria-label={`Ver ${part.name}`}
-                      className="rounded-lg bg-verde-claro p-2 text-verde-oscuro transition-colors hover:bg-verde-oscuro hover:text-white focus:outline-none focus:ring-2 focus:ring-verde-oscuro"
+                      className="cursor-pointer rounded-lg bg-verde-claro p-2 text-verde-oscuro transition-colors hover:bg-verde-oscuro hover:text-white focus:outline-none focus:ring-2 focus:ring-verde-oscuro"
                     >
                       <FiEye aria-hidden="true" className="h-4 w-4" />
                     </button>
@@ -129,7 +129,7 @@ export default function RepuestosTabla({
                       type="button"
                       onClick={() => onEdit(part)}
                       aria-label={`Editar ${part.name}`}
-                      className="rounded-lg bg-verde-claro p-2 text-verde-oscuro transition-colors hover:bg-verde-oscuro hover:text-white focus:outline-none focus:ring-2 focus:ring-verde-oscuro"
+                      className="cursor-pointer rounded-lg bg-verde-claro p-2 text-verde-oscuro transition-colors hover:bg-verde-oscuro hover:text-white focus:outline-none focus:ring-2 focus:ring-verde-oscuro"
                     >
                       <FiEdit2 aria-hidden="true" className="h-4 w-4" />
                     </button>
@@ -137,7 +137,7 @@ export default function RepuestosTabla({
                       type="button"
                       onClick={() => onDelete(part)}
                       aria-label={`Eliminar ${part.name}`}
-                      className="rounded-lg bg-rose-50 p-2 text-rose-600 transition-colors hover:bg-rose-600 hover:text-white focus:outline-none focus:ring-2 focus:ring-rose-500"
+                      className="cursor-pointer rounded-lg bg-rose-50 p-2 text-rose-600 transition-colors hover:bg-rose-600 hover:text-white focus:outline-none focus:ring-2 focus:ring-rose-500"
                     >
                       <FiTrash2 aria-hidden="true" className="h-4 w-4" />
                     </button>
